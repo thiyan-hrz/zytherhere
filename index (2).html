@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Safety & Quality Inspection System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-road"></i>
+                <span>Road Safety Inspector</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="#"><i class="fas fa-chart-line"></i> Reports</a>
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+            </div>
+            <div class="nav-user">
+                <i class="fas fa-user-circle"></i>
+                <span>thiyan</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <div class="menu-item active">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-video"></i>
+                    <span>Live Inspection</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Reports</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>Inspection Map</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-history"></i>
+                    <span>History</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Dashboard Content -->
+        <main class="dashboard">
+            <!-- Header -->
+            <div class="dashboard-header">
+                <h1>Road Safety Dashboard</h1>
+                <div class="header-actions">
+                    <button class="btn-primary" onclick="startInspection()">
+                        <i class="fas fa-play"></i> New Inspection
+                    </button>
+                    <button class="btn-secondary" onclick="uploadVideo()">
+                        <i class="fas fa-upload"></i> Upload
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #4CAF50;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Overall Quality</h3>
+                        <p class="stat-value" id="overallScore">--%</p>
+                        <span class="stat-label" id="qualityGrade">Pending</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #2196F3;">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Surface Quality</h3>
+                        <p class="stat-value" id="surfaceScore">--%</p>
+                        <span class="stat-label">Road Condition</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #FF9800;">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Safety Features</h3>
+                        <p class="stat-value" id="safetyScore">--%</p>
+                        <span class="stat-label">Infrastructure</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #9C27B0;">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Infrastructure</h3>
+                        <p class="stat-value" id="infraScore">--%</p>
+                        <span class="stat-label">Traffic Systems</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="content-grid">
+                <!-- Video/Analysis Area -->
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <img id="videoFeed" src="" alt="Inspection Feed">
+                        <div class="video-overlay" id="videoOverlay">
+                            <i class="fas fa-play-circle" onclick="startInspection()"></i>
+                            <p>Click to start inspection</p>
+                        </div>
+                    </div>
+                    <div class="video-controls">
+                        <button onclick="togglePlay()"><i class="fas fa-play"></i></button>
+                        <button onclick="captureFrame()"><i class="fas fa-camera"></i></button>
+                        <button onclick="exportReport()"><i class="fas fa-file-export"></i></button>
+                        <input type="range" min="0" max="100" value="0">
+                    </div>
+                </div>
+
+                <!-- Defect Detection Panel -->
+                <div class="defects-panel">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Detected Defects</h3>
+                    <div id="defectsList">
+                        <div class="defect-item">
+                            <span class="defect-type">No defects detected</span>
+                            <span class="defect-status safe">✓ Clear</span>
+                        </div>
+                    </div>
+                    <div class="defect-stats">
+                        <div class="defect-stat">
+                            <i class="fas fa-circle" style="color: #FF5722;"></i>
+                            <span>Potholes: <strong id="potholeCount">0</strong></span>
+                        </div>
+                        <div class="defect-stat">
+                            <i class="fas fa-minus" style="color: #FFC107;"></i>
+                            <span>Cracks: <strong id="crackCount">0</strong></span>
+                        </div>
+                        <div class="defect-stat">
+                            <i class="fas fa-square" style="color: #FF9800;"></i>
+                            <span>Rough Patches: <strong id="roughCount">0</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Safety Features Panel -->
+                <div class="safety-panel">
+                    <h3><i class="fas fa-shield-alt"></i> Safety Features</h3>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-road"></i>
+                            <span>Lane Markings</span>
+                            <span class="feature-status" id="laneStatus">--</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-sign"></i>
+                            <span>Traffic Signs</span>
+                            <span class="feature-status" id="signStatus">--</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-traffic-light"></i>
+                            <span>Traffic Lights</span>
+                            <span class="feature-status" id="lightStatus">--</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-walking"></i>
+                            <span>Crosswalks</span>
+                            <span class="feature-status" id="crosswalkStatus">--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Report Section -->
+            <div class="report-section">
+                <div class="report-header">
+                    <h3><i class="fas fa-file-alt"></i> Inspection Reports</h3>
+                    <button class="btn-small" onclick="refreshReports()">
+                        <i class="fas fa-sync"></i>
+                    </button>
+                </div>
+                <div class="report-list" id="reportList">
+                    <div class="report-item">
+                        <div class="report-info">
+                            <span class="report-date">No reports available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Upload Modal -->
+    <div class="modal" id="uploadModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Upload Video for Inspection</h2>
+            <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Click to upload or drag and drop</p>
+                <p class="upload-hint">MP4, AVI, MOV files supported</p>
+                <input type="file" id="fileInput" accept="video/*" hidden>
+            </div>
+            <button class="btn-primary" onclick="processUpload()">
+                <i class="fas fa-play"></i> Process Video
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
