@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Computer Vision Hub | Dev: tubakhxn</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                        <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>VISION HUB</h1>
+                    <span>INDUSTRIAL AI PORTAL</span>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#" class="nav-item active" data-tab="home">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+                    <span>Overview</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="wildlife">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    <span>Wildlife Monitor</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="traffic">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    <span>Traffic Intelligence</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="flood">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 6v12M8 10h8M8 14h8"></path></svg>
+                    <span>Flood Risk</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="upload">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"></path></svg>
+                    <span>Media Analyzer</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="settings">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    <span>AI Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="dev-info">
+                    <p class="dev-title">Dev/Creator</p>
+                    <p class="dev-name">tubakhxn</p>
+                    <a href="https://github.com/tubakhxn" target="_blank" class="dev-link">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <span>github.com/tubakhxn</span>
+                    </a>
+                </div>
+                <div class="status-panel">
+                    <div class="status-row">
+                        <span class="status-dot green"></span>
+                        <span class="status-label">Simulations Active</span>
+                    </div>
+                    <div class="status-row">
+                        <span class="status-dot green"></span>
+                        <span class="status-label">YOLO Inference: Simulated</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header Bar -->
+            <header class="top-header">
+                <div class="header-title">
+                    <h2 id="page-title">Overview Dashboard</h2>
+                    <span id="page-subtitle">Real-time status of computer vision subsystems</span>
+                </div>
+                <div class="system-time" id="system-time">
+                    2026-07-18 15:56:00
+                </div>
+            </header>
+
+            <!-- Content Screens -->
+            <div class="screen-container">
+                
+                <!-- 1. HOME SCREEN -->
+                <section class="screen active" id="screen-home">
+                    <div class="welcome-hero">
+                        <div class="hero-content">
+                            <h3>INDUSTRIAL COMPUTER VISION PLATFORM</h3>
+                            <p>An enterprise-grade orchestration panel showcasing real-time neural network detection, tracking, and environmental intelligence systems. Build and analyze vision models with advanced glowing HUD telemetry.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid-subsystems">
+                        <!-- Subsystem Card 1 -->
+                        <div class="subsystem-card" data-target="wildlife">
+                            <div class="card-glow"></div>
+                            <div class="card-icon cyan">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 6v12M8 10h8"></path></svg>
+                            </div>
+                            <h4>Wildlife & Bird Monitor</h4>
+                            <p>Real-time bird and wildlife tracker featuring trail mapping, migration analysis, and spatial heatmaps.</p>
+                            <div class="card-stats">
+                                <div><span class="stat-num" id="home-wildlife-count">0</span><span>Active Detections</span></div>
+                                <div><span class="stat-num text-cyan" id="home-wildlife-dir">N/A</span><span>Migration Flow</span></div>
+                            </div>
+                            <button class="btn-card">Launch Feed</button>
+                        </div>
+
+                        <!-- Subsystem Card 2 -->
+                        <div class="subsystem-card" data-target="traffic">
+                            <div class="card-glow"></div>
+                            <div class="card-icon yellow">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                            </div>
+                            <h4>Traffic Intersection Intel</h4>
+                            <p>ROUNDABOUT and intersection queue analyzer with direction sensing, congestion scoring, and lane audits.</p>
+                            <div class="card-stats">
+                                <div><span class="stat-num" id="home-traffic-count">0</span><span>Vehicles/Min</span></div>
+                                <div><span class="stat-num text-yellow" id="home-traffic-risk">0%</span><span>Max Congestion</span></div>
+                            </div>
+                            <button class="btn-card">Launch Feed</button>
+                        </div>
+
+                        <!-- Subsystem Card 3 -->
+                        <div class="subsystem-card" data-target="flood">
+                            <div class="card-glow"></div>
+                            <div class="card-icon red">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 6v12M8 10h8M8 14h8"></path></svg>
+                            </div>
+                            <h4>Flood Risk Predictor</h4>
+                            <p>Automated water body segmentation, infrastructure hit warnings, and multi-tier flood depth estimates.</p>
+                            <div class="card-stats">
+                                <div><span class="stat-num" id="home-flood-pct">0.0%</span><span>Water Coverage</span></div>
+                                <div><span class="stat-num text-red" id="home-flood-risk">SAFE</span><span>Risk Level</span></div>
+                            </div>
+                            <button class="btn-card">Launch Feed</button>
+                        </div>
+                    </div>
+
+                    <!-- Flow Diagram -->
+                    <div class="architecture-flow">
+                        <h3>VISION PIPELINE FLOW</h3>
+                        <div class="flow-steps">
+                            <div class="flow-step">
+                                <div class="step-circle">01</div>
+                                <h5>Input Source</h5>
+                                <p>RTSP / Video Stream</p>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="step-circle">02</div>
+                                <h5>Neural Inference</h5>
+                                <p>YOLOv8 Classifiers</p>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="step-circle">03</div>
+                                <h5>Centroid Tracker</h5>
+                                <p>ID Proximity & Trails</p>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="step-circle">04</div>
+                                <h5>Analytics Engine</h5>
+                                <p>Risk Classification</p>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="step-circle">05</div>
+                                <h5>HUD Compositor</h5>
+                                <p>High-Glow Overlay</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. WILDLIFE SCREEN -->
+                <section class="screen" id="screen-wildlife">
+                    <div class="feed-layout">
+                        <div class="feed-viewport">
+                            <canvas id="canvas-wildlife" width="800" height="480"></canvas>
+                            <div class="overlay-controls">
+                                <button class="feed-btn active" id="btn-wildlife-stream">STREAM FEED</button>
+                                <button class="feed-btn" id="btn-wildlife-heatmap">HEATMAP OVERLAY</button>
+                            </div>
+                        </div>
+                        <div class="telemetry-panel">
+                            <h3>ECOLOGICAL TELEMETRY</h3>
+                            <hr class="panel-divider">
+                            <div class="telemetry-grid">
+                                <div class="metric-box">
+                                    <span class="m-label">ACTIVE BIRDS</span>
+                                    <span class="m-value font-orbitron text-cyan" id="wl-birds">0</span>
+                                </div>
+                                <div class="metric-box">
+                                    <span class="m-label">ACTIVE ANIMALS</span>
+                                    <span class="m-value font-orbitron" id="wl-animals">0</span>
+                                </div>
+                                <div class="metric-box">
+                                    <span class="m-label">TOTAL COUNTED</span>
+                                    <span class="m-value font-orbitron text-green" id="wl-total">0</span>
+                                </div>
+                                <div class="metric-box">
+                                    <span class="m-label">MIGRATION FLOW</span>
+                                    <span class="m-value font-orbitron" id="wl-migration">N/A</span>
+                                </div>
+                            </div>
+                            
+                            <div class="live-chart-container">
+                                <h4>POPULATION OVER TIME (LIVE)</h4>
+                                <canvas id="chart-wildlife" width="220" height="110"></canvas>
+                            </div>
+
+                            <div class="telemetry-actions">
+                                <button class="btn-action" id="btn-reset-wildlife">Reset Counts</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. TRAFFIC SCREEN -->
+                <section class="screen" id="screen-traffic">
+                    <div class="feed-layout">
+                        <div class="feed-viewport">
+                            <canvas id="canvas-traffic" width="800" height="480"></canvas>
+                            <div class="overlay-controls">
+                                <button class="feed-btn active" id="btn-traffic-stream">INTERSECTION FEED</button>
+                                <button class="feed-btn" id="btn-traffic-zones">ZONE HIGHLIGHTS</button>
+                            </div>
+                        </div>
+                        <div class="telemetry-panel">
+                            <h3>TRAFFIC ANALYTICS</h3>
+                            <hr class="panel-divider">
+                            <div class="telemetry-grid">
+                                <div class="metric-box">
+                                    <span class="m-label">NORTH ZONE</span>
+                                    <span class="m-value font-orbitron text-cyan" id="tr-north">0</span>
+                                    <div class="meter-bar"><div class="meter-fill bg-blue" id="tr-north-bar" style="width: 0%"></div></div>
+                                </div>
+                                <div class="metric-box">
+                                    <span class="m-label">EAST ZONE</span>
+                                    <span class="m-value font-orbitron text-red" id="tr-east">0</span>
+                                    <div class="meter-bar"><div class="meter-fill bg-red" id="tr-east-bar" style="width: 0%"></div></div>
+                                </div>
+                                <div class="metric-box">
+                                    <span class="m-label">SOUTH ZONE</span>
+                                    <span class="m-value font-orbitron text-green" id="tr-south">0</span>
+                                    <div class="meter-bar"><div class="meter-fill bg-green" id="tr-south-bar" style="width: 0%"></div></div>
+                                </div>
+                                <div class="metric-box">
+                                    <span class="m-label">WEST ZONE</span>
+                                    <span class="m-value font-orbitron text-yellow" id="tr-west">0</span>
+                                    <div class="meter-bar"><div class="meter-fill bg-yellow" id="tr-west-bar" style="width: 0%"></div></div>
+                                </div>
+                            </div>
+                            
+                            <div class="traffic-summary">
+                                <div class="summary-row">
+                                    <span>CONGESTION RATIO:</span>
+                                    <span class="font-orbitron text-yellow" id="tr-congestion-rate">0%</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>WRONG WAY DETECTED:</span>
+                                    <span class="font-orbitron text-red" id="tr-wrong-way">0</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>VEHICLES DETECTED:</span>
+                                    <span class="font-orbitron text-green" id="tr-tot-detected">0</span>
+                                </div>
+                            </div>
+
+                            <div class="live-chart-container">
+                                <h4>VEHICLES THROUGHPUT FLOW</h4>
+                                <canvas id="chart-traffic" width="220" height="90"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. FLOOD SCREEN -->
+                <section class="screen" id="screen-flood">
+                    <div class="feed-layout">
+                        <div class="feed-viewport">
+                            <canvas id="canvas-flood" width="800" height="480"></canvas>
+                            <div class="overlay-controls">
+                                <button class="feed-btn active" id="btn-flood-stream">HUD SEGMENTATION</button>
+                            </div>
+                        </div>
+                        <div class="telemetry-panel">
+                            <h3>RISK TELEMETRY</h3>
+                            <hr class="panel-divider">
+                            <div class="telemetry-grid">
+                                <div class="metric-box">
+                                    <span class="m-label">WATER COVERAGE</span>
+                                    <span class="m-value font-orbitron text-cyan" id="fl-coverage">0.0%</span>
+                                </div>
+                                <div class="metric-box">
+                                    <span class="m-label">DEPTH ESTIMATION</span>
+                                    <span class="m-value font-orbitron" id="fl-depth">0.0 m</span>
+                                </div>
+                                <div class="metric-box span-2">
+                                    <span class="m-label">SYSTEM RISK BADGE</span>
+                                    <div class="risk-badge badge-safe" id="fl-badge">SAFE</div>
+                                </div>
+                            </div>
+
+                            <div class="flood-impact">
+                                <h4>INFRASTRUCTURE STATUS</h4>
+                                <div class="impact-row" id="infra-bridge">
+                                    <span>● BRIDGE CRITICAL ZONE</span>
+                                    <span class="status-text text-green" id="tr-bridge-status">OPERATIONAL</span>
+                                </div>
+                                <div class="impact-row" id="infra-road">
+                                    <span>● LOW-LYING HIGHWAY</span>
+                                    <span class="status-text text-green" id="tr-road-status">DRY</span>
+                                </div>
+                                <div class="impact-row" id="infra-power">
+                                    <span>● RESIDENTIAL URBAN SECTOR</span>
+                                    <span class="status-text text-green" id="tr-res-status">SECURE</span>
+                                </div>
+                            </div>
+
+                            <div class="slider-control-group">
+                                <label for="slider-water-level">MANUAL FLOOD WATER EXPANSION:</label>
+                                <input type="range" id="slider-water-level" min="0" max="100" value="20" class="styled-slider">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. UPLOAD SCREEN -->
+                <section class="screen" id="screen-upload">
+                    <div class="feed-layout">
+                        <div class="feed-viewport relative">
+                            <canvas id="canvas-upload" width="800" height="480"></canvas>
+                            <video id="video-upload-element" style="display: none;" loop muted></video>
+                            
+                            <div class="upload-overlay-zone" id="drop-zone">
+                                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" class="upload-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"></path></svg>
+                                <h4>Drag & Drop Video / Image Here</h4>
+                                <p>or click to browse from local computer</p>
+                                <input type="file" id="file-input" accept="image/*,video/*" style="display: none;">
+                            </div>
+                        </div>
+                        <div class="telemetry-panel">
+                            <h3>CUSTOM ANALYZER</h3>
+                            <hr class="panel-divider">
+                            <p class="panel-description">Upload your own wildlife, traffic, or water footage. The client-side vision emulator will overlay scanning systems and target classifiers.</p>
+                            
+                            <div class="upload-status-box" id="upload-file-details">
+                                <span class="detail-label">File: </span><span class="detail-val" id="uploaded-file-name">None Selected</span>
+                            </div>
+
+                            <div class="metric-box">
+                                <span class="m-label">YOLO CLASSIFICATIONS</span>
+                                <span class="m-value font-orbitron text-yellow" id="upload-detect-count">0</span>
+                            </div>
+
+                            <div class="upload-action-buttons">
+                                <button class="btn-action primary" id="btn-upload-analyze" disabled>Start AI Analysis</button>
+                                <button class="btn-action" id="btn-upload-clear">Clear File</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. SETTINGS SCREEN -->
+                <section class="screen" id="screen-settings">
+                    <div class="settings-layout">
+                        <div class="settings-card">
+                            <h3>NEURAL CONFIGURATION</h3>
+                            <hr class="panel-divider">
+                            
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Confidence Threshold</label>
+                                    <p>Minimum probability required to output bounding boxes.</p>
+                                </div>
+                                <div class="setting-control">
+                                    <input type="range" id="set-conf" min="10" max="95" value="28" class="styled-slider">
+                                    <span class="slider-display" id="val-conf">0.28</span>
+                                </div>
+                            </div>
+
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Intersection IoU Threshold</label>
+                                    <p>Overlap factor to update target tracks between frames.</p>
+                                </div>
+                                <div class="setting-control">
+                                    <input type="range" id="set-iou" min="5" max="90" value="40" class="styled-slider">
+                                    <span class="slider-display" id="val-iou">0.40</span>
+                                </div>
+                            </div>
+
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Centroid History Length (Frames)</label>
+                                    <p>Length of path trail dots overlayed behind objects.</p>
+                                </div>
+                                <div class="setting-control">
+                                    <input type="range" id="set-trail" min="10" max="100" value="40" class="styled-slider">
+                                    <span class="slider-display" id="val-trail">40</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>HUD & EFFECTS RENDERING</h3>
+                            <hr class="panel-divider">
+
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Scanline Intensity</label>
+                                    <p>Transparency of scanlines across feed overlays.</p>
+                                </div>
+                                <div class="setting-control">
+                                    <input type="range" id="set-scanline" min="0" max="100" value="20" class="styled-slider">
+                                    <span class="slider-display" id="val-scanline">20%</span>
+                                </div>
+                            </div>
+
+                            <div class="setting-row">
+                                <div class="setting-info">
+                                    <label>Alert Flash Triggers</label>
+                                    <p>Display flashing red indicators on critical breaches.</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="switch">
+                                        <input type="checkbox" id="set-flash" checked>
+                                        <span class="switch-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="settings-actions">
+                                <button class="btn-action primary" id="btn-save-settings">Save Configurations</button>
+                                <button class="btn-action" id="btn-default-settings">Reset Defaults</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Terminal/Console Area -->
+            <footer class="bottom-terminal">
+                <div class="terminal-header">
+                    <div class="term-title">
+                        <span class="blink text-green">●</span>
+                        <span>CORE PROCESS INFERENCE RUNTIME</span>
+                    </div>
+                    <span class="term-status" id="term-subsystem">Active Subsystem: Overview</span>
+                </div>
+                <div class="terminal-body" id="terminal-logs">
+                    <div class="log-line text-cyan">[SYSTEM] Booting Industrial Vision Hub Perception Dashboard...</div>
+                    <div class="log-line">[SYSTEM] Scanning hardware... CPU-only simulation mode initiated.</div>
+                    <div class="log-line">[SYSTEM] Web Assembly Vision Mock loaded successfully.</div>
+                </div>
+            </footer>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
