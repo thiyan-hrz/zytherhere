@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+
+[build.environment]
+  # Use Python 3.9 which is stable
+  PYTHON_VERSION = "3.9"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
